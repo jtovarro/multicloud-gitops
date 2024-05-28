@@ -4,6 +4,7 @@ clusterGroup:
   namespaces:
     - open-cluster-management
     - hello-world
+    - gmbros
   subscriptions:
     acm:
       name: advanced-cluster-management
