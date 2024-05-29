@@ -13,3 +13,14 @@ clusterGroup:
       #csv: advanced-cluster-management.v2.6.1
   projects:
     - hub
+  applications:
+    acm:
+      name: acm
+      namespace: open-cluster-management
+      project: hub
+      path: charts/mgmt-hub/acm
+      ignoreDifferences:
+      - group: internal.open-cluster-management.io
+        kind: ManagedClusterInfo
+        jsonPointers:
+        - /spec/loggingCA
