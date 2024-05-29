@@ -14,13 +14,15 @@ clusterGroup:
   projects:
     - hub
   applications:
-    acm:
-      name: acm
-      namespace: open-cluster-management
-      project: hub
-      path: charts/mgmt-hub/acm
-      ignoreDifferences:
-      - group: internal.open-cluster-management.io
-        kind: ManagedClusterInfo
-        jsonPointers:
-        - /spec/loggingCA
+    console:
+      name: console
+      path: charts/mgmt-hub/console
+      project: hub  
+mgmt:
+  console:
+    plugins:
+    - odf-console
+    - kubevirt-plugin
+    - mce
+    - acm
+
