@@ -12,12 +12,12 @@ clusterGroup:
   #    channel: release-2.10
   #    csv: advanced-cluster-management.v2.6.1
   projects:
-    - gmbros
+    - hub
   applications:
     console:
       name: console
       path: charts/mgmt-hub/console
-      project: gmbros  
+      project: hub  
 mgmt:
   console:
     plugins:
