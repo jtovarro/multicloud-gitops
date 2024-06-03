@@ -17,7 +17,7 @@ clusterGroup:
     console:
       name: console
       path: charts/mgmt-hub/console
-      project: hub  
+      project: gmbros  
 mgmt:
   console:
     plugins:
