@@ -1,5 +1,5 @@
 clusterGroup:
-  name: gmbros
+  name: hub
   isHubCluster: true
   namespaces:
   #  - open-cluster-management
@@ -12,7 +12,7 @@ clusterGroup:
   #    channel: release-2.10
   #    csv: advanced-cluster-management.v2.6.1
   projects:
-    - hub
+    - gmbros
   applications:
     console:
       name: console
