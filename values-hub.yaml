@@ -1,3 +1,6 @@
+global:
+  helloMessage: Hello world from overrides/values-mgmt1.next.gmbros.local.yaml
+
 clusterGroup:
   name: hub
   isHubCluster: true
