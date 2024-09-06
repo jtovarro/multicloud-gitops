@@ -1,5 +1,5 @@
 global:
-  helloMessage: Hello world from overrides/values-mgmt1.next.gmbros.local.yaml
+  helloMessage: Hello world from values-hub.yaml
 
 clusterGroup:
   name: hub
