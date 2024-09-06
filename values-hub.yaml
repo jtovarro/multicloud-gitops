@@ -2,17 +2,16 @@ clusterGroup:
   name: hub
   isHubCluster: true
   namespaces:
-    - open-cluster-management
     - vault
     - golang-external-secrets
     - config-demo
     - hello-world
   subscriptions:
-    acm:
-      name: advanced-cluster-management
-      namespace: open-cluster-management
-      channel: release-2.10
-      #csv: advanced-cluster-management.v2.6.1
+    #acm:
+    #  name: advanced-cluster-management
+    #  namespace: open-cluster-management
+    #  channel: release-2.10
+    #  csv: advanced-cluster-management.v2.6.1
   projects:
     - hub
     - config-demo
@@ -38,16 +37,6 @@ clusterGroup:
   #   - '/overrides/values-{{ $.Values.global.hubClusterDomain }}.yaml'
   #   - '/overrides/values-{{ $.Values.global.localClusterDomain }}.yaml'
   applications:
-    acm:
-      name: acm
-      namespace: open-cluster-management
-      project: hub
-      path: common/acm
-      ignoreDifferences:
-        - group: internal.open-cluster-management.io
-          kind: ManagedClusterInfo
-          jsonPointers:
-            - /spec/loggingCA
     vault:
       name: vault
       namespace: vault
@@ -81,16 +70,16 @@ clusterGroup:
         playbook: common/ansible/playbooks/hello-world/hello-world.yaml
         # per playbook timeout in seconds
         timeout: 234
-        # verbosity: "-v"
-  managedClusterGroups:
-    exampleRegion:
-      name: group-one
-      acmlabels:
-        - name: clusterGroup
-          value: group-one
-      helmOverrides:
-        - name: clusterGroup.isHubCluster
-          value: false
+        verbosity: "-v"
+  #managedClusterGroups:
+  #  exampleRegion:
+  #    name: group-one
+  #    acmlabels:
+  #      - name: clusterGroup
+  #        value: group-one
+  #    helmOverrides:
+  #      - name: clusterGroup.isHubCluster
+  #        value: false
           # Before enabling cluster provisioning, ensure AWS and/or Azure
           #   credentials and OCP pull secrets are defined in Vault.
           #   See values-secret.yaml.template
