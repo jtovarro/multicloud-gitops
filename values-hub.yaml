@@ -102,7 +102,7 @@ clusterGroup:
             awsPool:
               name: aws-eu
               openshiftVersion: 4.12.55
-              baseDomain: .sandbox1308.opentlc.com
+              baseDomain: sandbox1308.opentlc.com
               platform:
                 aws:
                   region: eu-central-1
