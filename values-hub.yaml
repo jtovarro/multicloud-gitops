@@ -98,7 +98,7 @@ clusterGroup:
           #   credentials and OCP pull secrets are defined in Vault.
           #   See values-secret.yaml.template
           #
-      clusterDeployment:
+      clusterDeployments:
         myFirstCluster:
           name: aws-eu
           openshiftVersion: 4.12.55
