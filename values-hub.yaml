@@ -91,23 +91,23 @@ clusterGroup:
       acmlabels:
         - name: clusterGroup
           value: group-one
-      helmOverrides:
-        - name: clusterGroup.isHubCluster
-          value: false
+      #helmOverrides:
+      #  - name: clusterGroup.isHubCluster
+      #    value: false
           # Before enabling cluster provisioning, ensure AWS and/or Azure
           #   credentials and OCP pull secrets are defined in Vault.
           #   See values-secret.yaml.template
           #
-          clusterPools:
-            awsPool:
-              name: aws-eu
-              openshiftVersion: 4.12.55
-              baseDomain: sandbox1308.opentlc.com
-              platform:
-                aws:
-                  region: eu-central-1
-              clusters:
-              - One
+      clusterDeployment:
+        myFirstCluster:
+          name: aws-eu
+          openshiftVersion: 4.12.55
+          baseDomain: sandbox1308.opentlc.com
+          platform:
+            aws:
+              region: eu-central-1
+          #clusters:
+          #- One
           #
           #  exampleAzurePool:
           #    name: azure-us
