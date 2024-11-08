@@ -41,31 +41,22 @@ clusterGroup:
   #   - '/overrides/values-{{ $.Values.global.hubClusterDomain }}.yaml'
   #   - '/overrides/values-{{ $.Values.global.localClusterDomain }}.yaml'
   applications:
+    clustergroup-chart:
+      name: clustergroup-chart
+      project: hub
+      chart: clustergroup-chart
+      chartVersion: 0.1.*
     acm:
       name: acm
       namespace: open-cluster-management
       project: hub
-      path: common/acm
+      chart: acm
+      chartVersion: 0.1.*
       ignoreDifferences:
         - group: internal.open-cluster-management.io
           kind: ManagedClusterInfo
           jsonPointers:
             - /spec/loggingCA
-    vault:
-      name: vault
-      namespace: vault
-      project: hub
-      path: common/hashicorp-vault
-    golang-external-secrets:
-      name: golang-external-secrets
-      namespace: golang-external-secrets
-      project: hub
-      path: common/golang-external-secrets
-    config-demo:
-      name: config-demo
-      namespace: config-demo
-      project: config-demo
-      path: charts/all/config-demo
     hello-world:
       name: hello-world
       namespace: hello-world
