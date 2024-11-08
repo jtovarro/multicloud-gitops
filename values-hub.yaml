@@ -41,10 +41,6 @@ clusterGroup:
   #   - '/overrides/values-{{ $.Values.global.hubClusterDomain }}.yaml'
   #   - '/overrides/values-{{ $.Values.global.localClusterDomain }}.yaml'
   applications:
-    clustergroup:
-      name: clustergroup
-      project: hub
-      path: charts/all/clustergroup-chart
     acm:
       name: acm
       namespace: open-cluster-management
