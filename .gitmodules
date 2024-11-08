@@ -1,0 +1,3 @@
+[submodule "charts/all/clustergroup-chart"]
+	path = charts/all/clustergroup-chart
+	url = https://github.com/validatedpatterns/clustergroup-chart
