@@ -43,6 +43,7 @@ clusterGroup:
   applications:
     clustergroup:
       name: clustergroup
+      namespace: clustergroup
       project: hub
       chart: clustergroup
       chartVersion: 0.1.*
