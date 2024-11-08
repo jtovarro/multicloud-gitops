@@ -41,10 +41,10 @@ clusterGroup:
   #   - '/overrides/values-{{ $.Values.global.hubClusterDomain }}.yaml'
   #   - '/overrides/values-{{ $.Values.global.localClusterDomain }}.yaml'
   applications:
-    clustergroup-chart:
-      name: clustergroup-chart
+    clustergroup:
+      name: clustergroup
       project: hub
-      chart: clustergroup-chart
+      chart: clustergroup
       chartVersion: 0.1.*
     acm:
       name: acm
