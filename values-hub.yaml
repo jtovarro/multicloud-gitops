@@ -10,12 +10,21 @@ clusterGroup:
     - golang-external-secrets
     - config-demo
     - hello-world
+    - quay-enterprise:
+        labels:
+          openshift.io/cluster-monitoring: "true"
+        operatorGroup: true
   subscriptions:
     acm:
       name: advanced-cluster-management
       namespace: open-cluster-management
       channel: release-2.12
     #  csv: advanced-cluster-management.v2.6.1
+    quay-operator:
+      name: quay-operator
+      namespace: quay-enterprise  
+      channel: stable-3.13
+      csv: quay-operator.v3.13.0
   projects:
     - hub
     - config-demo
@@ -74,6 +83,9 @@ clusterGroup:
       namespace: hello-world
       project: hello-world
       path: charts/all/hello-world
+  
+  mastersSchedulable: true
+  
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
     # The default schedule is every 10 minutes: imperative.schedule
