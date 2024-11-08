@@ -84,7 +84,7 @@ clusterGroup:
       project: hello-world
       path: charts/all/hello-world
   
-  mastersSchedulable: true
+  #mastersSchedulable: true
   
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
