@@ -43,10 +43,8 @@ clusterGroup:
   applications:
     clustergroup:
       name: clustergroup
-      namespace: clustergroup
       project: hub
-      chart: clustergroup
-      chartVersion: 0.1.*
+      path: charts/all/clustergroup-chart
     acm:
       name: acm
       namespace: open-cluster-management
