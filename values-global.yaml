@@ -4,7 +4,7 @@ global:
   options:
     useCSV: false
     syncPolicy: Automatic
-    installPlanApproval: Automatic
+    installPlanApproval: Manual
 main:
   clusterGroupName: hub
   multiSourceConfig:
