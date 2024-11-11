@@ -19,7 +19,6 @@ clusterGroup:
       name: advanced-cluster-management
       namespace: open-cluster-management
       channel: release-2.12
-    #  csv: advanced-cluster-management.v2.6.1
     quay-operator:
       name: quay-operator
       namespace: quay-enterprise  
@@ -101,12 +100,12 @@ clusterGroup:
     #     # per playbook timeout in seconds
     #     timeout: 234
     #     verbosity: "-v"
-  managedClusterGroups:
-    exampleRegion:
-      name: group-one
-      acmlabels:
-        - name: clusterGroup
-          value: group-one
+  # managedClusterGroups:
+  #   exampleRegion:
+  #     name: group-one
+  #     acmlabels:
+  #       - name: clusterGroup
+  #         value: group-one
       #helmOverrides:
       #  - name: clusterGroup.isHubCluster
       #    value: false
@@ -114,14 +113,14 @@ clusterGroup:
           #   credentials and OCP pull secrets are defined in Vault.
           #   See values-secret.yaml.template
           #
-      clusterDeployments:
-        myFirstCluster:
-          name: aws-eu
-          openshiftVersion: 4.12.55
-          baseDomain: sandbox1308.opentlc.com
-          platform:
-            aws:
-              region: eu-central-1
+      # clusterDeployments:
+      #   myFirstCluster:
+      #     name: aws-eu
+      #     openshiftVersion: 4.12.55
+      #     baseDomain: sandbox1308.opentlc.com
+      #     platform:
+      #       aws:
+      #         region: eu-central-1
           #clusters:
           #- One
           #
