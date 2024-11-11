@@ -1,6 +1,8 @@
 ---
 global:
   pattern: multicloud-gitops
+  secretStore:
+    backend: none
   options:
     useCSV: false
     syncPolicy: Automatic
